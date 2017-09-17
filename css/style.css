@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Saira");
+/* ------------- SCSS ------------- */
+@keyframes anim {
+  50% {
+    transform: translateX(70px); } }
+
+@keyframes animright {
+  50% {
+    transform: translateX(-70px); } }
+
+/* ------------- CSS ------------- */
+body {
+  font: normal 16px 'Open Sans', sans-serif;
+  background: #212121;
+  color: #fff;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  line-height: 24px; }
+
+.header {
+  background: #F45B69;
+  padding: 5px 0;
+  margin: 0 auto;
+  text-align: center; }
+
+h1 {
+  font: italic 4em 'Pacifico', cursive; }
+
+h2, p {
+  padding: 0px 10px 0px 10px; }
+
+.left {
+  border: 1px solid black;
+  list-style-type: none;
+  text-align: right;
+  margin: 30px;
+  right: 550px;
+  padding: 30px;
+  top: 70px; }
+
+.right {
+  border: 1px solid black;
+  list-style-type: none;
+  text-align: left;
+  margin: 20px;
+  left: 80px;
+  top: 60px; }
+
+ul li div.left:hover {
+  animation: anim 3s; }
+
+ul li div.right:hover {
+  animation: animright 3s; }
+
+/* ------------- TIMELINE ------------- */
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding: 20px 0 10px;
+  background: #fff; }
+
+.timeline ul li div.right::before {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  border-style: solid;
+  left: -15px;
+  border-width: 10px 16px 10px 0;
+  border-color: transparent #F45B69 transparent transparent; }
+
+.timeline ul li div {
+  position: relative;
+  width: 400px;
+  padding: 10px;
+  background: #F45B69; }
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-left: -12px;
+  border-radius: 100%;
+  background: inherit; }
+
+.timeline ul li div.left ::before {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  border-color: transparent transparent transparent #F45B69;
+  border-width: 10px 0px 10px 16px;
+  border-style: solid;
+  left: 418px; }
